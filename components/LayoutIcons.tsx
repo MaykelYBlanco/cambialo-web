@@ -1,48 +1,5 @@
 import React from "react";
 
-export const TabActivaBeige = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 355 75" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M0 30C0 13.4315 13.4315 0 30 0H280.341C289.43 0 298.029 4.12086 303.724 11.2054L355 75H0V30Z" fill="#FFF6E9"/>
-  </svg>
-);
-
-export const TabInactivaGris = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 225 64" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M0 30C0 13.4315 13.4315 0 30 0H169.763C180.324 0 190.108 5.55364 195.522 14.6221L225 64H112.5H0V30Z" fill="url(#paint0_linear_478_646)"/>
-    <defs>
-      <linearGradient id="paint0_linear_478_646" x1="113" y1="32" x2="112.5" y2="64" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#B2A798"/>
-        <stop offset="1" stopColor="#867764"/>
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-export const TabHoverVerde = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 225 94" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M0 30C0 13.4315 13.4315 0 30 0L195 0C211.569 0 225 13.4315 225 30V93.5H0V30Z" fill="url(#paint0_linear_478_733)"/>
-    <defs>
-      <linearGradient id="paint0_linear_478_733" x1="112.5" y1="5.5" x2="112.5" y2="148.5" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#9CFFC2"/>
-        <stop offset="0.350962" stopColor="#36DB75"/>
-        <stop offset="1" stopColor="#03210F"/>
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-export const TabContactanosBlue = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 355 75" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M355 30C355 13.4315 341.569 0 325 0H74.6594C65.5701 0 56.9708 4.12086 51.2764 11.2054L0 75H355V30Z" fill="url(#paint0_linear_478_644)"/>
-    <defs>
-      <linearGradient id="paint0_linear_478_644" x1="177.5" y1="38" x2="177.5" y2="75" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#63C3D1"/>
-        <stop offset="1" stopColor="#119EB3"/>
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
 export const LogoCambialo = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 170 106" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <path d="M168.371 69.3467H1.62891V104.224H168.371V69.3467Z" fill="#0B1B30"/>
