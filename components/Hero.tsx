@@ -13,43 +13,44 @@ export default function Hero() {
       id="home" 
       className="min-h-screen bg-brand-cream pt-32 pb-10 flex flex-col items-center justify-center text-center px-4 overflow-hidden"
     >
-      <div className="text-2xl md:text-5xl font-serif text-brand-dark mb-6 md:mb-8 max-w-[320px] md:max-w-none mx-auto">
+      {/* 1. Texto superior: de text-2xl a text-3xl en móvil */}
+      <div className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-8 md:mb-8 max-w-[320px] sm:max-w-[400px] md:max-w-none mx-auto leading-tight">
         Cualquiera crea una web genérica con IA...
       </div>
 
-      {/* Padding reducido en móvil (p-6) y ancho ajustado */}
-      <div className="bg-brand-blue rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 max-w-5xl w-full relative border-[3px] md:border-[4px] border-brand-dark shadow-[8px_8px_0_0_#0F1A2A] md:shadow-[12px_12px_0_0_#0F1A2A] z-20 flex flex-col items-center">
+      <div className="bg-brand-blue rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 max-w-[92%] md:max-w-5xl w-full mx-auto relative border-[3px] md:border-[4px] border-brand-dark shadow-[6px_6px_0_0_#0F1A2A] md:shadow-[12px_12px_0_0_#0F1A2A] z-20 flex flex-col items-center">
         
-        {/* Texto más pequeño en móvil (text-4xl) */}
-        <div className="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-4 leading-tight">
+        {/* 2. Título principal: de text-3xl a text-4xl/5xl en móvil */}
+        <div className="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-6 md:mb-4 leading-none text-center">
           Nosotros le damos
         </div>
         
-        <div className="flex justify-center items-center gap-1 md:gap-4 mb-6 w-full">
-          <div className="w-[30px] md:w-[60px] opacity-90 flex-shrink-0 transform scale-x-[-1]">
+        {/* 3. Lotties centrales: aumentamos el ancho mínimo de 180px a 240px */}
+        <div className="flex justify-center items-center gap-2 md:gap-4 mb-6 md:mb-6 w-full">
+          <div className="w-[40px] md:w-[60px] opacity-90 flex-shrink-0 transform scale-x-[-1]">
              <LottieNativo animacionData={animLineas} />
           </div>
           
-          {/* Lottie ajustado para no desbordar en 360px */}
-          <div className="w-[200px] sm:w-[300px] md:w-[480px] lg:w-[550px] flex-shrink-0 z-10">
+          <div className="w-[240px] sm:w-[320px] md:w-[480px] lg:w-[550px] flex-shrink-0 z-10">
             <LottieNativo animacionData={animGiro} />
           </div>
 
-          <div className="w-[30px] md:w-[60px] opacity-90 flex-shrink-0">
+          <div className="w-[40px] md:w-[60px] opacity-90 flex-shrink-0">
              <LottieNativo animacionData={animLineas} />
           </div>
         </div>
         
-        {/* Texto final ajustado para móvil */}
-        <div className="text-2xl sm:text-3xl md:text-5xl font-serif text-white flex items-center justify-center gap-2 md:gap-4 flex-wrap mt-2">
+        {/* 4. Texto inferior: de text-xl a text-2xl en móvil, con padding más grande en la caja */}
+        <div className="text-2xl sm:text-3xl md:text-5xl font-serif text-white flex items-center justify-center gap-2 md:gap-4 flex-wrap mt-2 text-center leading-tight">
           Que reflejara la calidad de 
-          <span className="bg-brand-cream text-brand-dark px-3 py-1 md:px-4 md:py-1 italic shadow-sm font-serif">
+          <span className="bg-brand-cream text-brand-dark px-3 md:px-4 py-1.5 md:py-1 italic shadow-sm font-serif whitespace-nowrap">
             tu negocio
           </span>
         </div>
       </div>
 
-      <div className="mt-8 w-[180px] sm:w-[280px] md:w-[400px] lg:w-[500px] pointer-events-none z-10 flex justify-center items-center">
+      {/* 5. Serafín inferior: de 180px a 220px en móvil */}
+      <div className="mt-10 md:mt-8 w-[220px] sm:w-[280px] md:w-[400px] lg:w-[500px] pointer-events-none z-10 flex justify-center items-center">
         <LottieNativo animacionData={animSeraphim} />
       </div>
     </section>

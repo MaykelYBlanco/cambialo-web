@@ -20,7 +20,7 @@ export default function Contacto() {
   return (
     <section 
       id="contacto" 
-      className="min-h-screen w-full bg-[#68CFC2] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500"
+      className="min-h-screen w-full bg-[#63C3D1] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500"
     >
       <div className="w-full max-w-5xl mx-auto relative px-4 flex flex-col items-center">
         
@@ -59,8 +59,8 @@ export default function Contacto() {
                 </span>
               </button>
               
-              <p className="text-2xl md:text-3xl font-serif text-brand-dark text-center md:text-left max-w-[400px]">
-                Envíanos un mensaje y nos pondremos <span className="font-bold text-brand-blue">en contacto contigo.</span>
+              <p className="text-2xl md:text-3xl font-georgian text-brand-dark text-center md:text-left max-w-[400px]">
+                Envíanos un mensaje y nos pondremos <span className="font-bold text-brand-dark">en contacto contigo.</span>
               </p>
             </div>
           </div>

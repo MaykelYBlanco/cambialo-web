@@ -3,26 +3,20 @@
 import React, { useState } from "react";
 import { AsteriscoSVG, FlechaRetorno } from "@/components/icons";
 import { BotonLottieMenu, LottieNativoSimple } from "@/components/LottieAnimators";
-
-// 1. Importamos la data desde constants
 import { serviciosData } from "@/constants/serviciosData"; 
-
-// 2. Importamos el Serafín para el hover
 import animSeraphim from "@/assets/animaciones/Camb_Seraphim_Idel.json"; 
 
 const servicios = Object.values(serviciosData);
 
 export default function Servicios() {
   const [vistaActiva, setVistaActiva] = useState<string>("menu");
-  const [hoverPrecio, setHoverPrecio] = useState(false); // <-- Estado del hover
+  const [hoverPrecio, setHoverPrecio] = useState(false);
 
   const contenidoActual = vistaActiva !== "menu" ? serviciosData[vistaActiva as keyof typeof serviciosData] : null;
 
   return (
     <section id="servicios" className="min-h-screen w-full bg-gradient-to-b from-brand-dark to-[#2677A6] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500">
       
-      {/* Ya no hay título estático aquí, el Navbar dinámico se encarga de mostrar "— Servicios" */}
-
       {vistaActiva === "menu" ? (
         <div className="flex flex-col items-center w-full max-w-[850px] px-4 z-10 animate-fade-in">
           {servicios.map((servicio, index) => (
@@ -30,7 +24,6 @@ export default function Servicios() {
               key={servicio.id} 
               animacionData={servicio.animacion} 
               onClick={() => setVistaActiva(servicio.id)} 
-              // Margen reducido en móvil (-mt-[20px]) y grande en escritorio
               margenNegativo={index === 0 ? "mt-0" : "-mt-[20px] sm:-mt-[40px] md:-mt-[100px] lg:-mt-[120px]"}
             />
           ))}
@@ -38,9 +31,9 @@ export default function Servicios() {
       ) : (
         <div className="flex flex-col items-center w-full max-w-4xl px-4 animate-fade-in z-10 relative">
           
-          {/* BOTÓN VOLVER MOVIDO ARRIBA DE LA TARJETA */}
-          <div className="w-full flex justify-end mb-4">
-            <button onClick={() => { setVistaActiva("menu"); setHoverPrecio(false); }} className="w-[50px] md:w-[70px] cursor-pointer hover:scale-105 transition-transform">
+          {/* BOTÓN VOLVER: Centrado en móvil, a la derecha en escritorio */}
+          <div className="w-full flex justify-center md:justify-end mb-6 md:mb-4">
+            <button onClick={() => { setVistaActiva("menu"); setHoverPrecio(false); }} className="w-[60px] md:w-[70px] cursor-pointer hover:scale-105 transition-transform">
               <FlechaRetorno />
             </button>
           </div>
@@ -56,7 +49,6 @@ export default function Servicios() {
             <div className="p-8 md:p-12 flex flex-col min-h-[350px]">
               
               {hoverPrecio ? (
-                // --- VISTA EXPANDIDA (Hover) ---
                 <div className="flex flex-col lg:flex-row items-stretch gap-x-4 w-full animate-fade-in">
                   <span className={`font-serif text-2xl md:text-4xl pt-2 lg:pt-6 shrink-0 tracking-tight mb-4 lg:mb-0 ${contenidoActual!.textMain}`}>
                     {contenidoActual!.priceTexto}
@@ -80,9 +72,8 @@ export default function Servicios() {
                   </div>
                 </div>
               ) : (
-                // --- VISTA NORMAL ---
                 <div className="flex flex-col animate-fade-in">
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-4 mb-10">
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-2 gap-y-4 mb-10">
                     <span className={`font-serif text-2xl md:text-4xl font-bold ${contenidoActual!.textMain}`}>
                       {contenidoActual!.priceTexto}
                     </span>
