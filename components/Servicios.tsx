@@ -15,7 +15,7 @@ export default function Servicios() {
   const contenidoActual = vistaActiva !== "menu" ? serviciosData[vistaActiva as keyof typeof serviciosData] : null;
 
   return (
-    <section id="servicios" className="min-h-screen w-full bg-gradient-to-b from-brand-dark to-[#2677A6] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500">
+    <section id="servicios" className="min-h-screen w-full bg-gradient-to-b from-brand-dark from-15% via-[#184860] via-40% to-[#63C3D1] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500">
       
       {vistaActiva === "menu" ? (
         <div className="flex flex-col items-center w-full max-w-[850px] px-4 z-10 animate-fade-in">
@@ -92,7 +92,8 @@ export default function Servicios() {
                         <div className="w-6 h-6 flex-shrink-0 mt-1">
                            <AsteriscoSVG /> 
                         </div>
-                        <span className={`font-serif text-xl md:text-2xl ${contenidoActual!.textMain} leading-tight`}>
+                        {/* APLICADO: font-georgian y font-normal para el texto de la lista */}
+                        <span className={`font-georgian font-normal text-xl md:text-2xl ${contenidoActual!.textMain} leading-tight`}>
                           {caracteristica}
                         </span>
                       </li>

@@ -19,8 +19,7 @@ export default function Contacto() {
 
   return (
     <section 
-      id="contacto" 
-      className="min-h-screen w-full bg-[#63C3D1] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500"
+      id="contacto" className="min-h-screen w-full bg-[#63C3D1] pt-32 pb-32 flex flex-col items-center relative transition-all duration-500"
     >
       <div className="w-full max-w-5xl mx-auto relative px-4 flex flex-col items-center">
         

@@ -45,7 +45,6 @@ export default function ContactForm({ onVolver, onSiguiente }: ContactFormProps)
               <div className="w-6 h-6 text-[#0B1B30] flex items-center justify-center">
                 <AsteriscoSVG />
               </div>
-              {/* Etiqueta natural sin anchos forzados */}
               <label className="text-[#0B1B30] font-bold text-lg whitespace-nowrap">Nombre y apellido</label>
             </div>
             <input 
@@ -64,7 +63,6 @@ export default function ContactForm({ onVolver, onSiguiente }: ContactFormProps)
               <div className="w-6 h-6 text-[#0B1B30] flex items-center justify-center">
                 <AsteriscoSVG />
               </div>
-              {/* Etiqueta natural sin anchos forzados */}
               <label className="text-[#0B1B30] font-bold text-lg whitespace-nowrap">Email</label>
             </div>
             <input 
@@ -99,8 +97,9 @@ export default function ContactForm({ onVolver, onSiguiente }: ContactFormProps)
 
       </form>
 
+      {/* bg-[#FFF6E9] en lugar del fondo rojo transparente */}
       {error && (
-        <div className="mt-6 text-center text-red-500 font-bold bg-red-100 py-3 px-4 rounded-xl border-[3px] border-red-300 animate-fade-in shadow-[4px_4px_0_0_#FCA5A5]">
+        <div className="mt-6 mx-auto max-w-[600px] text-center text-[#831111] font-bold bg-[#FFF6E9] py-3 px-4 rounded-xl border-[3px] border-[#831111] animate-fade-in shadow-[4px_4px_0_0_#831111]">
           {error}
         </div>
       )}
